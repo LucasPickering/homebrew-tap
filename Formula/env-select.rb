@@ -6,22 +6,22 @@ class EnvSelect < Formula
   # Brew gets upset if you define the verison in the url and the `version` field,
   # but if we just put it in the URL we have to write it 6 times... so this
   # is our alternative
-  verzun = "0.7.0"
+  verzun = "0.8.0"
 
   on_macos do
     on_arm do
       url "https://github.com/LucasPickering/env-select/releases/download/v#{verzun}/env-select-v#{verzun}-aarch64-apple-darwin.tar.gz"
-      sha256 "d87d9eeaa7f5a9b357e5e566c5fb5f125f001a07b8e4936af816691f6ee216c5"
+      sha256 "34095380ac4b77554c3b9e34cb5c3f34ef2729848a8316cb55b36f19514c1c31"
     end
     on_intel do
       url "https://github.com/LucasPickering/env-select/releases/download/v#{verzun}/env-select-v#{verzun}-x86_64-apple-darwin.tar.gz"
-      sha256 "22d22b13f436390ccf3160a4ef7832976900ecff03916ffa92c8fe86f98b58e1"
+      sha256 "4d47c6da2ad59a67a451315b61ba1b73dcf100b4ef473063645b44b5b7f4aefd"
     end
   end
   on_linux do
     on_intel do
       url "https://github.com/LucasPickering/env-select/releases/download/v#{verzun}/env-select-v#{verzun}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "6c100ebc70d61e9c891fd2fc194e25b96c8fb2718772ab3ea90309668da4cfad"
+      sha256 "1876231c4cc00ecfed59ed4bc9f1455ebb28b041e6b5837502b06a4dfd89c64a"
     end
   end
 
