@@ -1,40 +1,33 @@
 class EnvSelect < Formula
-  desc "Switch between common values for environment variables"
-  homepage "https://github.com/LucasPickering/env-select"
-  license "MIT"
-
-  # Brew gets upset if you define the verison in the url and the `version` field,
-  # but if we just put it in the URL we have to write it 6 times... so this
-  # is our alternative
-  verzun = "0.11.0"
-
+  desc "Easily switch between common values for arbitrary environment variables"
+  version "0.12.0"
   on_macos do
     on_arm do
-      url "https://github.com/LucasPickering/env-select/releases/download/v#{verzun}/env-select-v#{verzun}-aarch64-apple-darwin.tar.gz"
-      sha256 "d7290407ba4c95ccd16863f96a6f2e065bc4637242f53e01e4a93ad92d15b6a2"
+      url "https://github.com/LucasPickering/env-select/releases/download/v0.12.0/env-select-aarch64-apple-darwin.tar.xz"
+      sha256 "52cc4cc676af96ae93869671271880c8c6204d2f90299153dd2248764dd595a6"
     end
     on_intel do
-      url "https://github.com/LucasPickering/env-select/releases/download/v#{verzun}/env-select-v#{verzun}-x86_64-apple-darwin.tar.gz"
-      sha256 "9017564993ec7e3c2e7350c1b9d7f39bab8e944a9d2910cfeefc6cad6aabd0d4"
+      url "https://github.com/LucasPickering/env-select/releases/download/v0.12.0/env-select-x86_64-apple-darwin.tar.xz"
+      sha256 "286ba53d72e673c58521b18660e40a9ed2f9d534b22ab25f0e9bcd070183bc36"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/LucasPickering/env-select/releases/download/v#{verzun}/env-select-v#{verzun}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "84575a4601fbaf3c572fe3500ae72cbd2ff1ef379ab3ea0fab8c5eb3c676545a"
+      url "https://github.com/LucasPickering/env-select/releases/download/v0.12.0/env-select-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b89b586a1e406b9e12d3acdfa513e235ac52cbd771f05771d546fe6190c9c6d9"
     end
   end
+  license "MIT"
 
   def install
     bin.install "env-select"
 
-    system "#{bin}/env-select --shell fish init > es.fish"
-    fish_function.install "es.fish"
-    system "#{bin}/env-select --shell zsh init > es.zsh"
-    zsh_function.install "es.zsh"
-  end
+    # Homebrew will automatically install these, so we don't need to do that
+    doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
+    leftover_contents = Dir["*"] - doc_files
 
-  test do
-    system "#{bin}/env-select", "set", "TEST_VARIABLE", "true"
+    # Install any leftover files in pkgshare; these are probably config or
+    # sample files.
+    pkgshare.install *leftover_contents unless leftover_contents.empty?
   end
 end
