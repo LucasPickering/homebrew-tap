@@ -4,17 +4,17 @@ class EnvSelect < Formula
   on_macos do
     on_arm do
       url "https://github.com/LucasPickering/env-select/releases/download/v1.0.0/env-select-aarch64-apple-darwin.tar.xz"
-      sha256 "f72997478f4bf28b705734610ce19137249a76be8070c023f36821ad34183c17"
+      sha256 "3cd619876c2618e0e9b05ff70bb48c7e51c76a7aded27147ec8c51fdc64e73b8"
     end
     on_intel do
       url "https://github.com/LucasPickering/env-select/releases/download/v1.0.0/env-select-x86_64-apple-darwin.tar.xz"
-      sha256 "35a72da33182fdccca104381b24366369203ffd072bccc642ff9157e54e59fa1"
+      sha256 "95afaa884eb679f9ed10a70f799370a917b812abd8b7796c598006370b214e0c"
     end
   end
   on_linux do
     on_intel do
       url "https://github.com/LucasPickering/env-select/releases/download/v1.0.0/env-select-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "24748582427a7fcbb25b986cbe630a786d89b82df0b20ba1f05bd1d5470f86f1"
+      sha256 "65e34007d6b3100b436eed1f33c8d764838ad60012c0240452809b6dbbd78b25"
     end
   end
   license "MIT"
