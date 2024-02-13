@@ -1,20 +1,20 @@
 class EnvSelect < Formula
   desc "Easily switch between common values for arbitrary environment variables"
-  version "1.1.2"
+  version "1.1.3"
   on_macos do
     on_arm do
-      url "https://github.com/LucasPickering/env-select/releases/download/v1.1.2/env-select-aarch64-apple-darwin.tar.xz"
-      sha256 "46143b95a18cd7d37fafa22a9a12c680edc691d83f2f4052caaa381d487b1cb1"
+      url "https://github.com/LucasPickering/env-select/releases/download/v1.1.3/env-select-aarch64-apple-darwin.tar.xz"
+      sha256 "4b52f3eb4ec8bdf015ce62a508197b7f7594e3fd77810271402a97dad4d83e79"
     end
     on_intel do
-      url "https://github.com/LucasPickering/env-select/releases/download/v1.1.2/env-select-x86_64-apple-darwin.tar.xz"
-      sha256 "c7021f3dc27b2977b5aac1491deefac0bda47a279b24a2e2dd9debb008ff2685"
+      url "https://github.com/LucasPickering/env-select/releases/download/v1.1.3/env-select-x86_64-apple-darwin.tar.xz"
+      sha256 "d7ca3651301888eac969069439e48a2be83a61e01fed9cc587fec4fdc3f4542f"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/LucasPickering/env-select/releases/download/v1.1.2/env-select-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "41fbae4195010473c8950cd32bcc3aadf2f355a941a348066eb5641fa326c230"
+      url "https://github.com/LucasPickering/env-select/releases/download/v1.1.3/env-select-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "55af1a20374280bccdc386b241178ea3c37aa8bc9bfa76222b888933b4141370"
     end
   end
   license "MIT"
