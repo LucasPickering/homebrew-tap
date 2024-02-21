@@ -1,13 +1,13 @@
 class Slumber < Formula
   desc "Terminal-based HTTP client"
   if Hardware::CPU.type == :arm
-    url "https://github.com/LucasPickering/slumber/releases/download/v0.12.1/slumber-aarch64-apple-darwin.tar.xz"
-    sha256 "c9e98434fbfb1f7c3c5ba081255252e78cd64ca9cc56fcfe25dd29ce8000754e"
+    url "https://github.com/LucasPickering/slumber/releases/download/v0.13.0/slumber-aarch64-apple-darwin.tar.xz"
+    sha256 "bd820f432067138168f1252439406f3cb2b52d15a9c64e1b747bf7175671317e"
   else
-    url "https://github.com/LucasPickering/slumber/releases/download/v0.12.1/slumber-x86_64-apple-darwin.tar.xz"
-    sha256 "6333367f04166ebcf95a9f8483dcc8659a294616aee508ad81624857c0e6ef69"
+    url "https://github.com/LucasPickering/slumber/releases/download/v0.13.0/slumber-x86_64-apple-darwin.tar.xz"
+    sha256 "2a31a495526cdcea480f82f21948706851d152a3f3b4f8f8aa1bd88f9643ed9a"
   end
-  version "0.12.1"
+  version "0.13.0"
   license "MIT"
 
   def install
