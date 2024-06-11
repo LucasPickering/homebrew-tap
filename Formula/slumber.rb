@@ -1,21 +1,21 @@
 class Slumber < Formula
   desc "Terminal-based HTTP client"
   homepage "https://slumber.lucaspickering.me"
-  version "1.3.2"
+  version "1.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/LucasPickering/slumber/releases/download/v1.3.2/slumber-aarch64-apple-darwin.tar.xz"
-      sha256 "84448f2d0c14506c95725131777b67a13b07acae488e9593745999b30d3c6407"
+      url "https://github.com/LucasPickering/slumber/releases/download/v1.4.0/slumber-aarch64-apple-darwin.tar.xz"
+      sha256 "ac33fc45f8ec0f684ecd9412311fdb1057cb97f2c40bef50291ba0185d3722b5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/LucasPickering/slumber/releases/download/v1.3.2/slumber-x86_64-apple-darwin.tar.xz"
-      sha256 "4a0c86891f63b9d44bc4c2a808448434e86c48d90597d1cb9b60bbf25545798e"
+      url "https://github.com/LucasPickering/slumber/releases/download/v1.4.0/slumber-x86_64-apple-darwin.tar.xz"
+      sha256 "05fc5f1875bd1605705d06d8c3a07bbe0cc6822c628664dda000c79af7cce1ed"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/LucasPickering/slumber/releases/download/v1.3.2/slumber-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c05e114aaa62f4325274209a3007290af1e5aa45b1b77d76b375dfe550f34023"
+      url "https://github.com/LucasPickering/slumber/releases/download/v1.4.0/slumber-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "04c92217d6d01ce089b6c27239aa0f98f94646d24b1835a762a170bb5c94f641"
     end
   end
   license "MIT"
